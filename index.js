@@ -59,7 +59,7 @@ loadDatabase()
 const question = (text) => { const rl = readline.createInterface({ input: process.stdin, output: process.stdout }); return new Promise((resolve) => { rl.question(text, resolve) }) };
 
 async function zynxzoStart() {
-const { state, saveCreds } = await useMultiFileAuthState("session")
+const { state, saveCreds } = await useMultiFileAuthState("./session")
 const Zynxzoo = makeWASocket({
 logger: pino({ level: "silent" }),
 printQRInTerminal: false,
